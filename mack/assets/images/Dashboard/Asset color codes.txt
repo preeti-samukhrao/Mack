@@ -1,0 +1,22 @@
+Bar Graph Color Codes
+
+#1d3557
+#457b9d
+#e63946
+#3d3d3d
+#e6f598
+#fee08b
+#ff9f1c
+#00aa59
+
+Donought Chart Color Codes
+#1d3557
+#a8dadc
+background-box: #fafafa
+metrics background-box: #f0f0f0
+
+interaction text - roboto
+color code -#457b9d
+
+input field background-#f8f8f8
+

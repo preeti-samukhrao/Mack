@@ -1,0 +1,879 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* common sidebar */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #011627;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 20px;
+    padding-right: 14px;
+}
+.sidebar li {
+    list-style-type: none;
+}
+.sidebar li a,
+.sidebar li .dropdown-btn {
+    text-decoration: none;
+    font-size: 11px;
+    color: #feffff !important;
+    display: inline-flex;
+    width: 100%;
+    transition: 0.3s;
+    padding: 8px;
+    border-bottom: 0.5px solid #31434D;
+    /* padding-left: 35px; */
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.sidebar li a:hover {
+    color: #f1f1f1;
+}
+.sidebar li a.dashboard::before {
+    content: "";
+    background: url(../images/sidebar/dashboard.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.dashboard.active::before {
+    content: "";
+    background: url(../images/sidebar/requisition-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.my_map::before {
+    content: "";
+    background: url(../images/sidebar/map.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.my_map.active::before {
+    content: "";
+    background: url(../images/sidebar/analysing-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.manual_info_sharing::before {
+    content: "";
+    background: url(../images/sidebar/manuals.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.manual_info_sharing.active::before {
+    content: "";
+    background: url(../images/sidebar/rfq-submission-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.technical::before {
+    content: "";
+    background: url(../images/sidebar/technical.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.technical.active::before {
+    content: "";
+    background: url(../images/sidebar/vendor-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.safety_mngt::before {
+    content: "";
+    background: url(../images/sidebar/safety-management.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.safety_mngt.active::before {
+    content: "";
+    background: url(../images/sidebar/invoicing-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.audit_inspections::before {
+    content: "";
+    background: url(../images/sidebar/audit.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.audit_inspections.active::before {
+    content: "";
+    background: url(../images/sidebar/shipment-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li button.procurement::before {
+    content: "";
+    background: url(../images/sidebar/) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li button.procurement.active::before {
+    content: "";
+    background: url(../images/sidebar/warehouse-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.admin_settings::before {
+    content: "";
+    background: url(../images/sidebar/admin.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.admin_settings.active::before {
+    content: "";
+    background: url(../images/sidebar/others-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.checklist::before {
+    content: "";
+    background: url(../images/sidebar/check-lists.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.checklist.active::before {
+    content: "";
+    background: url(../images/sidebar/requisition-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.reports::before {
+    content: "";
+    background: url(../images/sidebar/reports.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li a.reports.active::before {
+    content: "";
+    background: url(../images/sidebar/requisition-selection.png) no-repeat;
+    background-size: 15px 15px;
+    height: 15px;
+    width: 15px;
+    display: block;
+}
+.sidebar li .links p {
+    margin-bottom: 0;
+    padding-left: 10px;
+    margin: auto 0;
+    width: 80%;
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidebar a.active {
+    background: #F2FAEF;
+    color: #000 !important;
+    border-radius: 5px;
+    border: 0px;
+}
+.sidebar #search_list {
+    margin-top: .5rem;
+}
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+.sidebar #search_list .dropdown-btn {
+    background-color: transparent;
+    border-style: none;
+    text-decoration: none;
+    border-bottom: 0.5px solid #31434D;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+.sidebar #search_list .dropdown-btn.active {
+    background-color: #feffff;
+    color: #011627 !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+}
+.sidebar #search_list .dropdown-container {
+    display: none;
+    padding: 10px;
+    padding-top: 0;
+    background-color: #feffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.sidebar #search_list .dropdown-container a {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    border-color: #ccc;
+}
+.sidebar #search_list .dropdown-container a:nth-of-type(1),
+.sidebar #search_list .dropdown-container a:nth-of-type(3),
+.sidebar #search_list .dropdown-container a:nth-of-type(5) {
+    border-right: 0.5px solid #ccc;
+}
+.sidebar #search_list .dropdown-container a:nth-of-type(5),
+.sidebar #search_list .dropdown-container a:nth-of-type(6) {
+    border-bottom: none;
+}
+.sidebar #search_list .dropdown-container .blue {
+    color: #011627 !important;
+}
+.sidebar #sidebar_cont .search_bar ::placeholder {
+    color: #999;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.sidebar #sidebar_cont .search_bar #search_navmenu {
+    border-radius: 20px;
+    border-style: none;
+    content: '';
+    background-image: url(../images/Dashboard/search-comp.png);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+    background-size: 12px;
+    background-position: 8px;
+}
+.openbtn:focus,
+.sidebar #search_list .dropdown-btn:focus,
+.sidebar #sidebar_cont .search_bar  #search_navmenu:focus,
+.sidebar #sidebar_cont .search_bar .filter_dropdown:focus,
+.main_content .core_content .same_style_tab .base_info_drop:focus,
+.main_content .core_content .same_style_tab #date:focus,
+.main_content .basic_profile_access .dropdown .dropbtn:focus  {
+    outline: none;
+}
+.sidebar #sidebar_cont .search_bar .filter_dropdown {
+    background-color: transparent;
+    border-style: none;
+}
+.sidebar #sidebar_cont .search_bar .filter_drop a {
+    display: block;
+    color: #feffff !important;
+    font-size: 12px;
+}
+
+
+
+/* basic classes */
+.black {
+    color: #000;
+}
+.white {
+    color: #feffff;
+}
+.whitebg {
+    background-color: #feffff;
+}
+.blue {
+    color: #011627 !important;
+}
+.bluebg {
+    background-color: #011627;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.less_mar {
+    margin: .5rem 0;
+}
+
+/* main page section */
+.main_content {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-left: 250px
+}
+.main_content .basic_profile_access {
+    text-align: right;
+}
+.main_content .basic_profile_access .mail_access a img {
+    width: 15px;
+}
+.main_content .basic_profile_access .mail_access .space_span {
+    padding: 0 5px;
+    color: #ccc;
+    font-size: 12px;
+}
+.main_content .basic_profile_access .mail_access li {
+    list-style-type: none;
+    display: inline;
+}
+.main_content .basic_profile_access .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0%;
+    font-size: 14px;
+}
+.main_content .basic_profile_access .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.main_content .basic_profile_access .dropdown .dropbtn {
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+}
+.main_content .basic_profile_access .dropdown .dropbtn .profile_name {
+    text-align: right;
+    margin-right: .5rem;
+}
+.main_content .basic_profile_access .dropdown .dropbtn .profile_name h5 {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.main_content .basic_profile_access .dropdown .dropbtn .profile_name p {
+    margin-bottom: 0;
+    font-size: 11px;
+}
+.main_content .basic_profile_access .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.main_content .basic_profile_access .dropdown:hover .dropdown-content {
+    display: block;
+}
+.main_content .basic_profile_access .dropdown .dropbtn .pro_img img {
+    width: 30px;
+    margin-right: .5rem;
+}
+.main_content .core_content .same_style_tab h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+.main_content .core_content .same_style_tab .base_info_drop,
+.main_content .core_content .same_style_tab #date {
+    width: 20%;
+    margin-right: .5rem;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 3px 0px;
+}
+.main_content .core_content .same_style_tab #date {
+    width: 17%;
+}
+.main_content .core_content .same_style_tab .base_info .base_info_blk .ship_logo {
+    margin-right: .5rem;
+}
+.main_content .core_content .same_style_tab .base_info .base_info_blk {
+    display: flex;
+}
+.main_content .core_content .same_style_tab .base_info .base_info_blk .adv_search a,
+.main_content .core_content .same_style_tab .base_info .base_info_blk .adv_search a:hover {
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 13px;
+}
+.main_content .core_content .same_style_tab .base_info .add_widget_btn {
+    font-size: 12px;
+}
+.main_content .core_content .vessel_info .vess_basic_info .left {
+    background-color: #e6e6e6;
+    padding: .5rem;
+}
+.main_content .core_content .vessel_info .vess_basic_info .right {
+    background-color: #f2f2f2;
+    padding: .5rem;
+    display: flex;
+}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.keepleftpadding {
+    padding-left: 15px !important;
+    padding-right: 0 !important;
+}
+/* donut chart */
+.donut-chart-container {
+    display: inline-block;
+    position: relative;
+    width: 10.9%;
+}
+.donut-chart-wrapper {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 100px;
+    height: 84px;
+    display: block;
+    position: relative;
+    z-index: 20;
+}  
+.donut-chart {
+    fill: transparent;
+    stroke: #022a4b;
+    stroke-width: 5px;
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 200.6px;
+    -webkit-transition: stroke-dashoffset 1.5s ease-in;
+    transition: stroke-dashoffset 1.5s ease-in;
+}  
+.donut-chart-bg {
+    fill: #f2f2f2;
+    stroke: #cde8fe;
+    stroke-width: 5px;
+}  
+.donut-chart-value,
+.chart-shadow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.donut-chart-value {
+    color: #5e5e5e;
+    z-index: 50;
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -1.2rem;
+    margin-left: .4rem;
+}  
+.nameAlgo {
+    text-align:center;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.main_content .core_content .vessel_info {
+    margin-top: 1rem;
+}
+.main_content .core_content .vessel_info .left h3 {
+    margin-bottom: 0;
+}
+.faint_blue {
+    color: #008df2;
+}
+.bold {
+    font-weight: bold;
+}
+.main_content .core_content .vessel_info .left p {
+    margin-bottom: .5rem;
+    font-size: 13px;
+}
+.main_content .core_content .vessel_info .left .vessel_count {
+    padding: .5rem;
+    padding-top: 0;
+}
+.main_content .core_content .vessel_info .left .material_serv_othr_info {
+    padding: 1.6rem .5rem;
+}
+.main_content .core_content .vessel_info .left .material_serv_othr_info p {
+    margin-bottom: .2rem;
+}
+.main_content .core_content .vessel_info .action_prog_tracker {
+    margin-top: 2rem;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .all_sub_heads {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar {
+    padding-left: 0;
+    counter-reset: step;
+    margin-bottom: 0;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li {
+    list-style-type: none;
+    width: 10%;
+    float: left;
+    text-transform: uppercase;
+    position: relative;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.active a {
+    background-color: #cde8fe;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li span {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    z-index: 2;
+    color: #011627;
+    font-size: 10px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li a:nth-of-type(1):before {
+    margin-left: 0;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li:after {
+    width: 100%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 12px;
+    left: -63%;
+    z-index: -1;
+    transition: all .8s;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li:first-child:after {
+    content: none;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li:nth-of-type(2):after {
+    background-color: transparent;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li a:before {
+    width: 25px;
+    height: 25px;
+    content: '';
+    line-height: 30px;
+    border: 1px solid #011627;
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: all .8s;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.req_ves a:before {
+    content: "";
+    background: url(../images/sidebar/requisition.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.alanysing_ves a:before {
+    content: "";
+    background: url(../images/sidebar/analysis.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.rfq_ves a:before {
+    content: "";
+    background: url(../images/sidebar/rfq-submission.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.vendor_ves a:before {
+    content: "";
+    background: url(../images/sidebar/vendor-identify.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.po_ves a:before {
+    content: "";
+    background: url(../images/sidebar/po-submission.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.inv_ves a:before {
+    content: "";
+    background: url(../images/sidebar/invoicing.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.shipment_ves a:before {
+    content: "";
+    background: url(../images/sidebar/shipment.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.warehouse_ves a:before {
+    content: "";
+    background: url(../images/sidebar/warehouse.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.main_content .core_content .vessel_info .action_prog_tracker .progress_bar_sec .progressbar li.othr_ves a:before {
+    content: "";
+    background: url(../images/sidebar/others.png) no-repeat;
+    background-size: 25px 25px;
+    height: 25px;
+    width: 25px;
+}
+.italic {
+    font-style: italic;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .bar_chart {
+    clear: both;
+    border-top: 1px solid #ccc;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .bar_chart p {
+    font-size: 9px;
+}
+.main_content .core_content .vessel_info .num_block .sideborder_blk {
+    border: 1px solid #5e5e5e;
+    border-left: 2px solid #011627;
+    border-radius: 2px;
+    padding: 2px 5px;
+    display: inline-block;
+    width: 47%;
+    margin-bottom: .7rem;
+}
+.main_content .core_content .vessel_info .num_block .sideborder_blk.rejected {
+    border-left: 2px solid red;
+}
+.main_content .core_content .vessel_info .num_block .sideborder_blk.rejected h6 {
+    color: red;
+}
+.main_content .core_content .vessel_info .num_block .sideborder_blk:nth-of-type(1),
+.main_content .core_content .vessel_info .num_block .sideborder_blk:nth-of-type(3),
+.main_content .core_content .vessel_info .num_block .sideborder_blk:nth-of-type(5) {
+    margin-right: .5rem;
+}
+.main_content .core_content .vessel_info .num_block .sideborder_blk p,
+.main_content .core_content .vessel_info .num_block .sideborder_blk h6 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn {
+    display: flex;
+    justify-content: flex-end;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .expand img {
+    width: 12px;
+    margin-right: 1rem;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .dropdown img {
+    width: 15px;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .dropdown {
+    position: relative;
+    display: inline-block;
+}  
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #feffff;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .dropdown-content a {
+    color: black;
+    padding: 5px;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    display: block;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .dropdown-content a:nth-of-type(4) {
+    border-bottom: none;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .dropdown:hover .dropdown-content {
+    display: block;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .expand_and_more_btn .dropdown .dropbtn {
+    background-color: transparent;
+    border-style: none;
+    border: none;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .burn_btn {
+    text-align: right;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .burn_btn button {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.margin_auto {
+    margin: auto;
+}
+
+/* Custom modal and its checkbox on add widget modal */
+.main_content .core_content .base_info .modal .modal-content {
+    padding: 0 1rem;
+    border-radius: 0;
+}
+.main_content .core_content .base_info .modal .modal-header {
+    display: block;
+}
+.main_content .core_content .base_info .modal .modal-header .close:focus {
+    outline: none;
+}
+.main_content .core_content .base_info .modal .modal-dialog {
+    margin: auto 0 auto auto;
+    top: 24%;
+    max-width: 400px;
+}
+.main_content .core_content .base_info .modal .modal-body {
+    margin-bottom: 2rem;
+}
+.main_content .core_content .base_info .modal .modal-body .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: .8rem;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.main_content .core_content .base_info .modal .modal-body .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.main_content .core_content .base_info .modal .modal-body .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+}
+.main_content .core_content .base_info .modal .modal-body .container:hover input ~ .checkmark {
+    border: 2px solid #ccc;
+    border-radius: 50px;
+}
+.main_content .core_content .base_info .modal .modal-body .container input:checked ~ .checkmark {
+    background-color: #00cc00;
+    border-radius: 50px;
+    border: 2px solid #00cc00;
+}
+.main_content .core_content .base_info .modal .modal-body .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.main_content .core_content .base_info .modal .modal-body .container input:checked ~ .checkmark:after {
+    display: block;
+}
+.main_content .core_content .base_info .modal .modal-body .container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+/* collapsible in activity log */
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor .panel {
+    display: none;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor .panel.show {
+    display: block !important;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor .panel {
+    color: #a6a6a6;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor .accordion {
+    border-bottom: 1px solid #ccc;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: .6rem;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor .expand_and_more_btn {
+    margin-bottom: .3rem;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor p,
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor h6 {
+    margin-bottom: 0;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor h6 {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor p {
+    font-size: 11px;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor .date_and_time span:nth-child(1) {
+    margin-right: 1rem;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor .panel .panel_blk {
+    padding: .5rem 0;
+    border-bottom: .5px solid #ccc;
+}
+.red {
+    color: red
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor.quick_links .quck_link_btns {
+    display: flex;
+    justify-content: space-between;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor.quick_links .quck_link_btns button {
+    font-size: 12px;
+    width: 45%;
+    margin: .5rem 0;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor.quick_links .quck_link_btns button:focus {
+    outline: none;
+}
+.main_content .core_content .vessel_info .progress_bar_sec .activity_log .accor.quick_links .quck_link_btns button img {
+    width: 15px;
+}

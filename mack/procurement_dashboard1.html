@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MACK | Procurement Dashboard1</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/slick-theme.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="main">
+            <div id="mySidebar" class="sidebar">
+                <div id="sidebar_cont">
+                    <div class="search_bar">
+                        <input type="text" id="search_navmenu" onkeyup="myFunction()" placeholder="Search here" title="Type in a category">
+                        <button class="filter_dropdown cursor-pointer"><img src="assets/images/Dashboard/drop-down.png"></button>
+                        <div class="filter_drop" style="display: none;">
+                            <a class="blue" href="#">aa</a>
+                            <a class="blue" href="#">bb</a>
+                            <a class="blue" href="#">cc</a>
+                        </div>
+                    </div>
+                    <div id="search_list">
+                        <li>
+                            <a onclick="openTab(event, 'dashboard')" class="dashboard tablinks cursor-pointer links">
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openTab(event, 'my_map')" class="my_map tablinks cursor-pointer links">
+                                <p>My Map</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openTab(event, 'manual_info_sharing')" class="manual_info_sharing tablinks cursor-pointer links">
+                                <p>Manuals and Info Sharing</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openTab(event, 'technical')" class="technical tablinks cursor-pointer links">
+                                <p>Technical</p>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a onclick="openTab(event, 'reporting_kip')" class="reporting_kip tablinks cursor-pointer links">
+                                <p>Reporting KPI</p>
+                            </a>
+                        </li> -->
+                        <li>
+                            <a onclick="openTab(event, 'safety_mngt')" class="safety_mngt tablinks cursor-pointer links">
+                                <p>Safety Management</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openTab(event, 'audit_inspections')" class="audit_inspections tablinks cursor-pointer links">
+                                <p>Audit and Inspections</p>
+                            </a>
+                        </li>
+                        <li>
+                            <button id="defaultOpen" onclick="openTab(event, 'procurement')" class="procurement dropdown-btn cursor-pointer links active">
+                                <p>Procurement <span style="float: right;"><img src="assets/images/Dashboard/drop-down.png"></span></p>
+                            </button>
+                            <div class="dropdown-container">
+                                <a class="blue" href="#">Catalog<br>Management</a>
+                                <a class="blue" href="#">Purchase<br>Order</a>
+                                <a class="blue" href="#">Approval<br>Workflow</a>
+                                <a class="blue" href="#">Integration</a>
+                                <a class="blue" href="#">Asset<br>Management</a>
+                                <a class="blue" href="#">Pre-Build<br>Templates</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a onclick="openTab(event, 'admin_settings')" class="admin_settings tablinks cursor-pointer links">
+                                <p>Admin/Settings</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openTab(event, 'checklist')" class="checklist tablinks cursor-pointer links">
+                                <p>Checklist</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openTab(event, 'reports')" class="reports tablinks cursor-pointer links">
+                                <p>Reports</p>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div id="main_content" class="main_content">
+                <div class="first_line row">
+                    <div class="open_close_btn col-md-2">
+                        <span id="one" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                            <img src="assets/images/Dashboard/menu.png">
+                        </span>
+                        <span  id="two"style="font-size:30px;cursor:pointer" onclick="closeNav() ">
+                            <img src="assets/images/Dashboard/menu.png">
+                        </span>
+                    </div>
+                    <div class="basic_profile_access col-md-10">
+                        <div class="mail_access">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="assets/images/dummy/download-blue.png"></a>
+                                    <span class="space_span">|</span>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="assets/images/dummy/download-blue.png"></a>
+                                    <span class="space_span">|</span>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="assets/images/dummy/download-blue.png"></a>
+                                    <span class="space_span">|</span>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="assets/images/dummy/download-blue.png"></a>
+                                    <span class="space_span">|</span>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <div class="profile_name">
+                                                <h5 class="blue">Person Name</h5>
+                                                <p class="blue">Person Post</p>
+                                            </div>
+                                            <span class="pro_img"><img src="assets/images/dummy/Group 995.png"></span>
+                                            <span class="drop_icon"><img src="assets/images/Dashboard/drop-down.png"></span>
+                                        </button>
+                                        <div class="dropdown-content">
+                                        <a href="#">Logout</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="less_mar">
+                <div class="core_content">
+                    <div id="dashboard" class="same_style_tab tabcontent">
+                        <h2 class="blue">dashboard</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="my_map" class="same_style_tab tabcontent">
+                        <h2 class="blue">my_map</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="manual_info_sharing" class="same_style_tab tabcontent">
+                        <h2 class="blue">manual_info_sharing</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="technical" class="same_style_tab tabcontent">
+                        <h2 class="blue">technical</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="reporting_kip" class="same_style_tab tabcontent">
+                        <h2 class="blue">reporting_kip</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="safety_mngt" class="same_style_tab tabcontent">
+                        <h2 class="blue">safety_mngt</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="audit_inspections" class="same_style_tab tabcontent">
+                        <h2 class="blue">audit_inspections</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="admin_settings" class="same_style_tab tabcontent">
+                        <h2 class="blue">admin_settings</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="checklist" class="same_style_tab tabcontent">
+                        <h2 class="blue">checklist</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+                    <div id="reports" class="same_style_tab tabcontent">
+                        <h2 class="blue">reports</h2>
+                        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+                    </div>
+
+                    <div class="procurement_content">
+                        <div id="procurement" class="same_style_tab tabcontent">
+                            <h2 class="blue">Procurement Dashboard</h2>
+                            <div class="base_info">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="base_info_blk">
+                                            <img class="ship_logo" src="assets/images/Dashboard/ship.png">
+                                            <select class="base_info_drop" id="vessels" name="vessels">
+                                                <option value="all_vessels">All Vessles (8)</option>
+                                                <option value="my_vessels">My Vessles (3)</option>
+                                                <option value="backup_vessels">My Backup Vessles (1)</option>
+                                                <option value="other_vessels">Other Vessles (1)</option>
+                                            </select>
+                                            <select class="base_info_drop" id="other_menu" name="other_menu">
+                                                <option value="all_spirit">all</option>
+                                                <option value="donegal_spirit">Donegal Spirit</option>
+                                                <option value="galeway_spirit">Galeway Spirit</option>
+                                                <option value="london_spirit">London Spirit</option>
+                                                <option value="barcelona_spirit">Barcelona Spirit</option>
+                                                <option value="atlanda_spirit">Atlanda Spirit</option>
+                                            </select>
+                                            <input type="date" id="date" name="date" onfocus="(this.type='date')" placeholder="Date">
+                                            <div class="adv_search">
+                                                <a class="blue" href="#">Advanced Search</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class="btn add_widget_btn bluebg white" data-toggle="modal" data-target="#myModal">+ Add Widget</button>
+                                    </div>
+                                    <!-- open modal when clicked on add widget -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h6 class="modal-title bold">+ Add Widget</h6>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <label class="container blue">Dashboard Overview
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container blue">Actions &amp; Progress Tracker
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container blue">Activity Log
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container blue">Quick Links
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container blue">Spend Analysis
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container blue">Catalogue
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="container blue">Warehouse Overview
+                                                            <input type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vessel_info all_vessels">
+                            <div class="vess_basic_info">
+                                <div class="row">
+                                    <div class="col-md-3 keepleftpadding">
+                                        <div class="left">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="vessel_count">
+                                                        <h3 class="faint_blue">8</h3>
+                                                        <p>Vessels</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="material_serv_othr_info">
+                                                        <p>Materials <span class="count faint_blue">4240</span></p>
+                                                        <p>Services <span class="count faint_blue">353</span></p>
+                                                        <p>Others <span class="count faint_blue">86</span></p>
+                                                    </div>                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 nopadding">
+                                        <div class="right">
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="80">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">Requisition</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="80">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">Analysing</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="30">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">RFQ<br>Submission</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="75">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">Vedor<br>Identification</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="19">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">PO<br>Submission</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="40">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">Invoicing</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="66">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">Shipment</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="45">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo">Warehouse</p>
+                                            </div>
+                                            <div class="donut-chart-container donut-chart-js" data-percentage="59">
+                                                <p class="donut-chart-value"></p>
+                                                    <svg class="donut-chart-wrapper">
+                                                        <circle class="donut-chart-bg" cx="50" cy="40" r="30"></circle>
+                                                        <circle class="donut-chart" cx="50" cy="40" r="30"></circle>
+                                                    </svg>
+                                                    <div class="chart-shadow"></div>
+                                                <p class="nameAlgo blue">Others</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action_prog_tracker">
+                                <div class="progress_bar_sec">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="left">
+                                                <h4 class="blue all_sub_heads">Action &amp; Progress tracker</h4>
+                                                <div class="row">
+                                                    <div class="col-md-9 margin_auto">
+                                                        <ul id="progress-bar" class="progressbar">
+                                                            <li class="all_ves active"><a href="#"><span>All</span></a></li>
+                                                            <li class="req_ves"><a href="#"></a></li>
+                                                            <li class="alanysing_ves"><a href="#"></a></li>
+                                                            <li class="rfq_ves"><a href="#"></a></li>
+                                                            <li class="vendor_ves"><a href="#"></a></li>
+                                                            <li class="po_ves"><a href="#"></a></li>
+                                                            <li class="inv_ves"><a href="#"></a></li>
+                                                            <li class="shipment_ves"><a href="#"></a></li>
+                                                            <li class="warehouse_ves"><a href="#"></a></li>
+                                                            <li class="othr_ves"><a href="#"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="expand_and_more_btn">
+                                                            <div class="expand">
+                                                                <a href="#">
+                                                                    <img src="assets/images/Dashboard/fullscreen.png">
+                                                                </a>
+                                                            </div>
+                                                            <div class="dropdown">
+                                                                <button class="dropbtn">
+                                                                        <img src="assets/images/Dashboard/more.png">
+                                                                </button>
+                                                                <div class="dropdown-content">
+                                                                    <a href="#">Collapse</a>
+                                                                    <a href="#">Export to pdf</a>
+                                                                    <a href="#">Export to Excel</a>
+                                                                    <a href="#">Remove Widget</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="burn_btn">
+                                                            <button class="btn faint_blue bold">Burn rate</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bar_chart">
+                                                    <p class="italic">Showing results for all storages</p>
+                                                    <div class="row">
+                                                        <div class="col-md-8 keepleftpadding">
+                                                            <div id="barchart_material"></div>
+                                                        </div>
+                                                        <div class="col-md-4 nopadding">
+                                                            <div class="num_block">
+                                                                <div class="sideborder_blk">
+                                                                    <h6>25</h6>
+                                                                    <p>new Requisits</p>
+                                                                </div>
+                                                                <div class="sideborder_blk">
+                                                                    <h6>30</h6>
+                                                                    <p>InProgress</p>
+                                                                </div>
+                                                                <div class="sideborder_blk">
+                                                                    <h6>18</h6>
+                                                                    <p>OnHold</p>
+                                                                </div>
+                                                                <div class="sideborder_blk rejected">
+                                                                    <h6>13</h6>
+                                                                    <p>Rejected</p>
+                                                                </div>
+                                                                <div class="sideborder_blk">
+                                                                    <h6>5</h6>
+                                                                    <p>Withdrawn</p>
+                                                                </div>
+                                                                <div class="sideborder_blk">
+                                                                    <h6>8</h6>
+                                                                    <p>Completed</p>
+                                                                </div>
+                                                                <div class="sideborder_blk">
+                                                                    <h6>9</h6>
+                                                                    <p>Others</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="right activity_log">
+                                                <div class="carousel">
+                                                    <div class="accor activity_log">
+                                                        <div class="accordion">
+                                                            <div class="row">
+                                                                <div class="col-md-8">
+                                                                    <h4 class="blue all_sub_heads cursor-pointer">Activity Log</h4>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="expand_and_more_btn">
+                                                                        <div class="expand">
+                                                                            <a href="#">
+                                                                                <img src="assets/images/Dashboard/fullscreen.png">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="dropdown">
+                                                                            <button class="dropbtn">
+                                                                                    <img src="assets/images/Dashboard/more.png">
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <a href="#">Collapse</a>
+                                                                                <a href="#">Export to pdf</a>
+                                                                                <a href="#">Export to Excel</a>
+                                                                                <a href="#">Remove Widget</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel show">
+                                                            <div class="panel_blk">
+                                                                <h6>Some head here</h6>
+                                                                <p>some infor here</p>
+                                                                <p class="date_and_time">
+                                                                    <span>2020-07-30</span>
+                                                                    <span>00:12:56</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="panel_blk">
+                                                                <h6>Some head here</h6>
+                                                                <p>some infor here</p>
+                                                                <p class="date_and_time">
+                                                                    <span>2020-07-30</span>
+                                                                    <span>00:12:56</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="panel_blk">
+                                                                <h6>Some head here</h6>
+                                                                <p>some infor here</p>
+                                                                <p class="date_and_time">
+                                                                    <span>2020-07-30</span>
+                                                                    <span>00:12:56</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="panel_blk">
+                                                                <h6>Some head here</h6>
+                                                                <p class="red">Budget not approved</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accor quick_links">
+                                                        <div class="accordion">
+                                                            <div class="row">
+                                                                <div class="col-md-8">
+                                                                    <h4 class="blue all_sub_heads cursor-pointer">Quick Links</h4>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="expand_and_more_btn">
+                                                                        <div class="expand">
+                                                                            <a href="#">
+                                                                                <img src="assets/images/Dashboard/fullscreen.png">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="dropdown">
+                                                                            <button class="dropbtn">
+                                                                                    <img src="assets/images/Dashboard/more.png">
+                                                                            </button>
+                                                                            <div class="dropdown-content">
+                                                                                <a href="#">Collapse</a>
+                                                                                <a href="#">Export to pdf</a>
+                                                                                <a href="#">Export to Excel</a>
+                                                                                <a href="#">Remove Widget</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="quck_link_btns">
+                                                                <button class="btn quick_link_btn">
+                                                                    <img src="assets/images/Dashboard/vendor-evaluation.png">
+                                                                    vendor evaluation
+                                                                </button>
+                                                                <button class="btn quick_link_btn">
+                                                                    <img src="assets/images/Dashboard/work-flow.png">
+                                                                    Workflow<br>configuration
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vessel_info my_vessels">
+                            <p>my_vessels</p>
+                        </div>
+                        <div class="vessel_info backup_vessels">
+                            <p>backup_vessels</p>
+                        </div>
+                        <div class="vessel_info other_vessels">
+                            <p>other_vessels</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="assets/js/main.js"></script>
+</html>
